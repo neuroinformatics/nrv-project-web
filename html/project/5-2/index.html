@@ -1,0 +1,607 @@
+<!doctype html public "-//IETF//DTD HTML 2.0//EN">
+<html>
+<head>
+   <META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css; charset=euc-jp">
+   <LINK Type="text/css" Rel="Stylesheet" Href="../../css/thema.css">
+<title>     </title>
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#9E0061" alink="#FF0000">
+
+<h3>Study on the learning algorithms for neural data analysis</h3>
+
+<p Class="member">Andrej Cichocki</p>
+<address>Laboratory for Advanced Brain Signal Processing, BSI, RIKEN</address><br>
+e-mail: <a href="mailto:cia@brain.riken.go.jp" Title="mail address">cia@brain.riken.go.jp</a>
+<hr WIDTH="100%">
+
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td><img src="_blnk.gif" width=9 height=1></td>
+<td><img src="_blnk.gif" width=89 height=1></td>
+<td><img src="_blnk.gif" width=26 height=1></td>
+<td><img src="_blnk.gif" width=4 height=1></td>
+<td><img src="_blnk.gif" width=30 height=1></td>
+<td><img src="_blnk.gif" width=12 height=1></td>
+<td><img src="_blnk.gif" width=132 height=1></td>
+<td><img src="_blnk.gif" width=7 height=1></td>
+<td><img src="_blnk.gif" width=46 height=1></td>
+<td><img src="_blnk.gif" width=3 height=1></td>
+<td><img src="_blnk.gif" width=6 height=1></td>
+<td><img src="_blnk.gif" width=2 height=1></td>
+<td><img src="_blnk.gif" width=30 height=1></td>
+<td><img src="_blnk.gif" width=8 height=1></td>
+<td><img src="_blnk.gif" width=19 height=1></td>
+<td><img src="_blnk.gif" width=153 height=1></td>
+<td><img src="_blnk.gif" width=6 height=1></td>
+<td><img src="_blnk.gif" width=24 height=1></td>
+<td><img src="_blnk.gif" width=104 height=1></td>
+</tr>
+<tr>
+<td width=710 height=131 colspan=19 rowspan=1 valign=top align=left>
+<img width=710 height=131 border=0 src="img0.gif"></td>
+</tr>
+<tr>
+<td width=9 height=27></td>
+<td width=89></td>
+<td width=26></td>
+<td width=4></td>
+<td width=30></td>
+<td width=12></td>
+<td width=132></td>
+<td width=7></td>
+<td width=46></td>
+<td width=3></td>
+<td width=6></td>
+<td width=2></td>
+<td width=30></td>
+<td width=8></td>
+<td width=19></td>
+<td width=153></td>
+<td width=6></td>
+<td width=24></td>
+<td width=104></td>
+</tr>
+<tr>
+<td height=23></td>
+<td colspan=5></td>
+<td width=540 height=355 colspan=13 rowspan=3 valign=top align=left>
+<img width=540 height=355 border=0 src="img1.gif"></td>
+</tr>
+<tr>
+<td height=255></td>
+<td width=149 height=255 colspan=4 rowspan=1 valign=top align=left>
+<map name="map376">
+<area shape="rect" coords="0,214,148,255" href="http://www.brain.riken.go.jp/">
+<area shape="rect" coords="0,214,149,254">
+<area shape="rect" coords="0,143,148,184" href="http://www.bsis.brain.riken.go.jp/">
+<area shape="rect" coords="0,143,149,183">
+<area shape="rect" coords="0,71,148,112" href="http://www.bsp.brain.riken.go.jp/">
+<area shape="rect" coords="0,71,149,111">
+<area shape="rect" coords="0,0,148,41" href="http://www.open.brain.riken.go.jp/%7ecia/">
+<area shape="rect" coords="0,0,149,40">
+</map>
+<img width=149 height=255 border=0 src="img2.gif" usemap="#map376"></td>
+<td></td>
+</tr>
+<tr>
+<td height=77></td>
+<td colspan=5></td>
+</tr>
+<tr>
+<td height=16></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=102></td>
+<td width=701 height=102 colspan=18 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=693></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=94></td>
+<td width=693 height=94 valign=top align=left>
+
+<p align=justify><font face="Times New Roman" color=#003399 size=3>Our objective is to develop and apply novel neural networks and blind signal processing algorithms and methods: Spatiotemporal decorrelation, Dynamic Independent Components Analysis (ICA), Multichannel Blind Deconvolution/Separation (MBD), Higher Order Statistics (HOS), Unsupervised Nonlinear Adaptive Filtering (UNAF) and Time-Frequency (TF) methods to analyze multisensory biomedical signals especially EKG/MEG, EMG data.</font><font face="Times New Roman" color=#003399 size=4><br></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+<tr>
+<td height=19></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=30></td>
+<td width=701 height=30 colspan=18 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=700 height=30 valign=top align=left bgcolor=#ffcc00>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=693></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=22></td>
+<td width=693 height=22 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#ff0000 size=4><B>ICA, BSS and BSE Package for Images</B></font><font face="Georgia" color=#ff0000 size=2><B><br></B></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+<tr>
+<td height=11></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=53></td>
+<td></td>
+<td width=260 height=254 colspan=8 rowspan=3 valign=top align=left>
+<img width=260 height=254 border=0 src="img3.jpg"></td>
+<td colspan=9></td>
+</tr>
+<tr>
+<td height=144></td>
+<td></td>
+<td colspan=5></td>
+<td width=183 height=144 colspan=3 rowspan=1 valign=top align=left>
+<img width=183 height=144 border=0 src="img4.jpg"></td>
+<td></td>
+</tr>
+<tr>
+<td height=57></td>
+<td></td>
+<td colspan=9></td>
+</tr>
+<tr>
+<td height=11></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=72></td>
+<td width=701 height=72 colspan=18 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=693></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=64></td>
+<td width=693 height=64 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#0000ff size=2>The ICALAB package for image processing developed in Advanced Brain Signal Processing Laboratory, BSI RIKEN with collaboration with our colleagues from associated laboratories. <br><center>On the left side there is a main window of the ICALAB and on the left input window allowing import of images in different formats.<br></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=219></td>
+<td width=701 height=219 colspan=18 rowspan=1 valign=top align=left>
+<img width=701 height=219 border=0 src="img5.gif"></td>
+</tr>
+<tr>
+<td height=1></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=49></td>
+<td width=701 height=49 colspan=18 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=693></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=41></td>
+<td width=693 height=41 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#0000ff size=2>Three windows with 21 input original images (sources), than 21 rectangular parts taken for learning and 21 separated components in&nbsp; positive and negative versions.</font><font face="Georgia" color=#0000ff size=1><br></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+<tr>
+<td height=11></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=26></td>
+<td width=701 height=26 colspan=18 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=700 height=26 valign=top align=left bgcolor=#ffcc00>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=693></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=18></td>
+<td width=693 height=18 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#ff0000 size=4><B>Components before and after deflation</B></font><font face="Georgia" color=#ff0000 size=2><B><br></B></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+<tr>
+<td height=19></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=302></td>
+<td width=346 height=303 colspan=8 rowspan=2 valign=top align=left>
+<img width=346 height=303 border=0 src="img6.gif"></td>
+<td colspan=3></td>
+<td width=344 height=302 colspan=7 rowspan=1 valign=top align=left>
+<img width=344 height=302 border=0 src="img7.jpg"></td>
+</tr>
+<tr>
+<td height=1></td>
+<td colspan=10></td>
+</tr>
+<tr>
+<td height=7></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=76></td>
+<td width=346 height=76 colspan=8 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=338></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=68></td>
+<td width=338 height=68 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#0000ff size=2>Using deflation approach we can decide which components contain information considered as noise. I the above example we decided to reconstruct the PET sequence only from components &#35;3 and &#35;5.<br></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+
+
+</td>
+<td colspan=2></td>
+<td width=346 height=76 colspan=8 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=338></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=68></td>
+<td width=338 height=68 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#0000ff size=2>And here is the result after deflation. The movie generated from the original images and after above deflation you can see below. We used more contrast color map for the movies.</font><font face="Georgia" color=#0000ff size=1><br></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+<tr>
+<td height=15></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=26></td>
+<td width=701 height=26 colspan=18 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=700 height=26 valign=top align=left bgcolor=#ffcc00>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=693></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=18></td>
+<td width=693 height=18 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#ff0000 size=4><B>PET imaging animations</B></font><font face="Georgia" color=#ff0000 size=2><B><br></B></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+</td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+<tr>
+<td height=12></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=34></td>
+<td colspan=2></td>
+<td width=185 height=34 colspan=5 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=177></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=26></td>
+<td width=177 height=26 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#0000ff size=1>The original sequence of PET images </font><font face="Georgia" color=#ffcc00 size=1><B>before</B></font><font face="Georgia" color=#0000ff size=1> applying noise separation.</font><font face="Georgia" color=#0000ff size=2><br></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+
+
+</td>
+<td colspan=5></td>
+<td width=186 height=34 colspan=4 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=177></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=26></td>
+<td width=177 height=26 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#0000ff size=1>The original sequence of PET images </font><font face="Georgia" color=#ff0000 size=1><B>after </B></font><font face="Georgia" color=#0000ff size=1>applying noise separation.</font><font face="Georgia" color=#0000ff size=2><br></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+
+
+</td>
+<td colspan=2></td>
+</tr>
+<tr>
+<td height=4></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=172></td>
+<td colspan=3></td>
+<td width=174 height=174 colspan=3 rowspan=2 valign=top align=left>
+<img width=174 height=174 border=0 src="img8.gif">
+
+</td>
+<td colspan=7></td>
+<td width=172 height=172 colspan=2 rowspan=1 valign=top align=left>
+<img width=172 height=172 border=0 src="img9.gif">
+
+</td>
+<td colspan=3></td>
+</tr>
+<tr>
+<td height=2></td>
+<td colspan=3></td>
+<td colspan=12></td>
+</tr>
+<tr>
+<td height=15></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=34></td>
+<td width=701 height=34 colspan=18 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=693></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=26></td>
+<td width=693 height=26 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#0000ff size=1>The PET data obtained in collaboration with Department of Physics, Ewha Womans University and Department of Nuclear Medicine, <br><center>Seoul National University Hospital, Korea.</font><font face="Georgia" color=#0000ff size=2><br></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+<tr>
+<td height=22></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=22></td>
+<td width=701 height=22 colspan=18 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=693></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=14></td>
+<td width=693 height=14 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#000000 size=1><a href="http://www.open.brain.riken.go.jp/%7ecia/">Cichocki's Homepage</a> &#124; <a href="http://www.bsp.brain.riken.go.jp/">Laboratory</a> &#124; <a href="http://www.bsis.brain.riken.go.jp/">BSIS Group</a> &#124; <a href="http://www.brain.riken.go.jp/">BSI RIKEN</a><br></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+<tr>
+<td height=1></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=71></td>
+<td width=701 height=71 colspan=18 rowspan=1 valign=top align=left>
+<img width=701 height=71 border=0 src="img10.gif"></td>
+</tr>
+<tr>
+<td height=1></td>
+<td colspan=18></td>
+</tr>
+<tr>
+<td height=56></td>
+<td width=701 height=56 colspan=18 rowspan=1 valign=top align=left>
+
+<table border=0 cellpadding=0 cellspacing=0>
+<tr>
+<td width=3 height=3></td>
+<td width=693></td>
+<td width=3></td>
+</tr>
+<tr>
+<td height=49></td>
+<td width=693 height=49 valign=top align=left>
+
+<p align=center><center><font face="Georgia" color=#000000 size=1>BSI RIKEN ABSP Lab.<br><center>2-1, HIROSAWA, WAKO-SHI,<br><center>SAITAMA, 351-0198<br><center>JAPAN<br></font>
+</td>
+<td></td>
+</tr>
+<tr>
+<td height=3></td>
+<td colspan=2></td>
+</tr>
+</table>
+
+
+
+</td>
+</tr>
+</table>
+
+<a name=bottom></a>
+</body>
+</html>
+

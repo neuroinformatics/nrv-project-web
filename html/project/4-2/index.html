@@ -1,0 +1,59 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css; charset=euc-jp">
+   <LINK Type="text/css" Rel="Stylesheet" Href="../../css/thema.css">
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#9E0061" alink="#FF0000">
+
+<h3>Analog-digital hybrid vision chips for motion
+processing systems based on direction-selective neural networks</h3>
+
+<p Class="member">Yoshihito Amemiya</p>
+<address>Department of Electrical Engineering,
+Hokkaido University</address><br>
+e-mail: <a href="mailto:amemiya@sapiens-ei.eng.hokudai.ac.jp" Title="mail address">amemiya@sapiens-ei.eng.hokudai.ac.jp</a>
+<br>URL: <a href="http://sapiens-ei.eng.hokudai.ac.jp/">http://sapiens-ei.eng.hokudai.ac.jp/</a><br>
+<hr WIDTH="100%">
+
+<p>
+We developed analog-digital hybrid CMOS circuits producing optical
+flows of visual images, aiming at the development of high-speed and
+compact motion processing systems. The circuit computes the optical
+flows in real time by parallel operations of a number of local motion
+processors on the basis of the mechanisms of biological motion
+detectors.
+</p>
+<p>
+Three kinds of CMOS circuits that are useful for constructing
+motion-detection neurochips were developed, i.e., i) current-mode
+quantizers for image quantization, ii) current-mode XOR circuits for
+binary edge detection, and iii) analog circuits for motion
+detection. Figure 1 shows sample structure of the motion-detection
+chip consisting of the above circuits.
+</p>
+
+<br><center>
+<a class="fig" href="fig1.png" target="_top"><img Src="fig1.png"
+Alt="Fig.1" width="450" height="270" title="Fig.1(Click to zoom up)"></a>
+<br>Fig.1(35k PNG image)<font size=-1><color "#DDDDDD">Click to zoom up</color></font>
+</center><br>
+<p>
+The analog motion-detection circuit, which implements the unit cell of
+correlation neural networks, produces direction selective voltages for
+moving current spots between two adjacent input terminals
+(Fig. 2). The circuit consists of i) a delay circuit that produces
+delayed voltage from the input current (P1) and ii) a correlation
+circuit that multiplies the delayed voltage and the input current
+(P2). We fabricated prototype chips consisting of above basic
+circuits. Figure 2 shows example operations of the motion detection
+circuit. The output of the circuit was 0 V when the current spot moved
+from the terminals of P2 to that of P1, while it outputted nonzero
+voltage when the spot moved opposite direction, as expected. Thus, the
+circuit produces direction-selective responses for moving
+objects. These circuits can be used to construct analog-digital hybrid
+neuromorphic chips.
+</p>
+<hr WIDTH="100%">
+</body>
+</html>

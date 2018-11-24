@@ -1,0 +1,465 @@
+BODY{ 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11pt;
+  margin: 0% 2% 0% 2%;
+  background-repeat: no-repeat;
+}
+BODY.header{ 
+  margin-left: 0;
+  border-left: 0;
+  padding-left: 0;
+  text-indent: 0;
+}
+H1.title{
+  font-family: Times New Roman, sans-serif;
+  font-size: 28pt;
+  font-weight: 700;
+  color: red;
+}
+H1.center{
+  text-align: center;
+}
+H2{
+  font-size: 14pt;
+  font-weight: 700;
+  color: black;
+  margin: 0.5em 0.2em 0.2em 0.2em;
+}
+H2.center{
+  text-align: center;
+}
+H3{
+  font-weight: 400;
+  line-height: normal;
+  color: black;
+}
+H3.subtitle{
+  text-align: center;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+  color: blue;
+}
+P{ 
+  font-size: 1.0em;
+  text-indent: 1em;
+  margin: 0.5em 2em 0.5em 2em;
+}
+P.program{ 
+  font-size: 1.0em;
+  text-indent: 0em;
+  margin: 0em 0em 0.5em 1em;
+}
+P.center{ 
+  text-align: center;
+}
+P.center2{ 
+  text-align: center;
+  margin: 0.0em 0em 0.0em 0em;
+}
+P.item{
+  color: black;
+  font-size: 0.75em;
+  font-weight: 400;
+  margin: 0.0em 2em 0.5em 1em;
+}
+P.member{
+  color: black;
+  font-size: 0.75em;
+  font-weight: 400;
+  margin: 0.0em 2em 0.0em 8em;
+}
+DL{
+  font-weight: 400;
+  text-indent: 1em;
+  color: black;
+  margin: 0.0em 2em 0.0em 1em;
+}
+DL.none{
+  font-weight: 400;
+  text-indent: 1em;
+  color: black;
+  margin: 0.0em 0em 0.0em 0em;
+}
+DL.contents{
+  font-weight: 400;
+  text-indent: 1em;
+  color: black;
+  margin: 0.0em 2em 0.0em 1em;
+}
+DL.contents DT{
+  font-weight: 700;
+}
+
+A:link {
+  color: #0000aa;
+}
+A:visited{
+  color: #0000aa;
+}
+A:active{
+  color: green;
+}
+A:hover{
+  color: #aa0000;
+}
+UL{
+  color: black;
+  font-weight: 400;
+  list-style-type: square;  
+  list-style-position: outside;
+  line-height: normal;
+}
+UL UL{
+  color: black;
+  font-weight: 400;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+UL.none{
+  color: black;
+  font-weight: 400;
+  list-style-type: none;  
+  list-style-position: outside;
+  line-height: normal;
+}
+UL.research{
+  color: #0033AA;
+  font-weight: 700;
+  list-style-type: disc;  
+  list-style-position: outside;
+  line-height: normal;
+}
+UL.contents{
+  font-size: 1.25em;
+  color: black;
+  font-weight: 700;
+  list-style-type: square;  
+  list-style-position: outside;
+  line-height: normal;
+}
+UL UL.contents{
+  font-size: 0.75em;
+  color: black;
+  font-weight: 400;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+UL.contents UL{
+  font-size: 0.75em;
+  color: black;
+  font-weight: 400;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+UL.clist{
+  color: black;
+  font-weight: 400;
+  list-style-type: square;  
+  list-style-position: outside;
+  line-height: normal;
+  margin: 0.0em 0.0em 0.0em 0.0em;
+  padding-left: 1.0em
+}
+UL.clist Li{
+  margin: 0.0em 0.0em 0.0em 0.0em;
+}
+UL.conferences{
+  color: black;
+  font-weight: 400;
+  list-style-type: square;  
+  list-style-position: outside;
+  line-height: normal;
+  margin: 0.0em 3.0em 0.0em 0.0em;
+}
+OL{
+  color: #993300;
+  font-weight: 700;
+}
+OL.none{
+  list-style-type: none;  
+}
+OL.normal{
+  color: #000000;
+  font-weight: 500;
+  font-size: 1.0em;
+  list-style-position: outside;
+  text-indent: 0;
+}
+OL.mlist{
+  color: #000000;
+  font-weight: 700;
+  font-size: 1.25em;
+  text-indent: 0;
+}
+SMALL.subtitle{
+  font-size: 0.8em;
+  font-weight: 700;
+  color: blue;
+}
+SMALL.caption{
+  font-weight: 500;
+  font-size: 0.6em;
+}
+SMALL{
+  font-size: 0.6em;
+}
+SPAN.explanation{
+  color: #0000DD;
+}
+EM{
+  font-size: 1em;
+  font-style: italic;
+  color: #CC0000;
+}
+EM.member{
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 700;
+  color: #990000;
+}
+A.member{
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 700;
+  color: #990000;
+  text-decoration: none;
+}
+A.restitle{
+  color: #0033AA;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+EM.member2{
+  font-size: 0.95em;
+  font-style: normal;
+  font-weight: 500;
+  color: #000000;
+}
+EM.member2 A{
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+EM.member2 A:hover{
+  color: #B00000;
+  text-decoration: underline;
+}
+
+
+EM.attr{
+  font-size: 0.95em;
+  color: black;
+  font-weight: 500;
+  font-style: italic;
+}
+EM.condition{
+  font-size: 0.95em;
+  color: #aa0000;
+  font-weight: 500;
+  font-style: normal;
+}
+
+EM.aff{
+  color: black;
+  font-size: 1.0em;
+  font-style: italic;
+}
+EM.important{
+  font-size: 1.2em;
+  font-style: normal;
+  font-weight: 700;
+  color: #990000;
+}
+EM.strong{
+  font-weight: 700;
+  color: #0000BB;
+}
+EM.group{
+  font-weight: 700;
+  font-style: normal;
+  color: #BB0000;
+}
+IMG.center{
+  text-align: center;
+}
+IMG.infigureR{
+  text-align: right;
+  width: 45%;
+  height: auto;
+}
+DIV.infigure{
+  width: 40%;
+  text-align: right;
+}
+TABLE.center{
+  text-align: center;
+}
+TABLE.commandlist{
+  border-width: 0;
+}
+TABLE.commandlist TR{
+  background-color: #FFFFFF;
+  text-align: left;
+}
+TABLE.commandlist TR TD{
+  width: 120;
+}
+TABLE.menu{
+}
+TABLE.menu TR{
+}
+TABLE.menu TR TD{
+  text-align: center;
+  font-size: 0.75em;
+  font-weight: 700;
+  width: 100;
+}
+TABLE.small{
+}
+TABLE.small TR{
+}
+TABLE.small TR TD{
+  font-size: 0.75em;
+}
+ADDRESS{
+  font-size: 0.75em;
+  font-weight: 400;
+}  
+DIV{
+  color: black;
+}
+DIV.t1{
+  color: white;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+DIV.t2{
+  color: #FFFFFF;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+DIV.t3{
+  font-size: 1.2em;
+  font-weight: 700;
+}
+DIV.t4{
+  font-size: 1.0em;
+  font-weight: 700;
+}
+DIV.date{
+  color: #500000;
+  font-size: 1.0em;
+  font-weight: 500;
+}
+DIV.info{
+  font-size: 1.0em;
+  font-weight: 500;
+}
+DIV.center{
+  text-align: center;
+}
+DIV.right{
+  text-align: right;
+}
+table.program{
+  font-size: 1.0em;
+  font-weight: 500;
+}
+
+
+table.contents{
+  color: #FFFFFF; 
+  font-weight: 700;
+  font-size: 1.0em;
+}
+
+table.contents tr td h3{
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.1em;
+  margin: 0% 5% 0% 5%
+}
+
+table.contents tr td h4{
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 1.0em;
+  margin: 0% 5% 0% 5%
+}
+
+table.contents tr td ul{
+  color: #FFFFFF; 
+  font-size: 0.8em;
+  font-weight: 700;
+  margin: 0% 5% 0% 15%
+}
+
+table.contents tr td p{
+  color: #FFFFFF; 
+  font-weight: 500;
+  font-size: 0.8em;
+  text-indent: 0;
+  margin: 0% 5% 0% 15%
+}
+
+table.contents tr td p.access{
+  color: #FFFFFF; 
+  font-weight: 500;
+  font-size: 0.5em;
+  text-indent: 0;
+  margin: 0% 5% 0% 15%
+}
+
+table.contents tr td A{
+  color: #FFFFFF;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+table.contents tr td A:visited{
+   color: #FFFFFF;
+}
+
+table.contents tr td A:active{
+  color: #FFAAAA;
+  font-weight: 700;
+}
+
+table.contents tr td A:hover{
+  color: #FF5555;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+
+table.header{
+  font-size: 10pt;
+  font-weight: 700;
+  padding: 0% 0% 0% 0%;
+  text-indent: 0;
+}
+
+table.header tr td A{
+  color: #000000;
+  font-size: 0.6em;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+table.header tr td A:hover{
+  color: #B00000;
+}
+
+A.conferences{
+  color: #000000;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+A.conferences:hover{
+  color: #B00000;
+}

@@ -1,0 +1,63 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css; charset=euc-jp">
+   <LINK Type="text/css" Rel="Stylesheet" Href="../../css/thema.css">
+</head>
+<body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#9E0061" alink="#FF0000">
+
+<h3>Neural network model for detecting planar surface from optical flow in area MST of the visual cortex</h3>
+
+<p Class="member">Hiroaki Okamoto</p>
+<address>Autonomous Systems Laboratory, Fujitsu Laboratories Ltd.</address><br>
+e-mail: <a href="mailto:okamoto@flab.fujitsu.co.jp" Title="mail address">okamoto@flab.fujitsu.co.jp</a>
+<hr WIDTH="100%">
+
+<p>
+The goal of this study is to model a neural network, linking retinal and
+MST cells, for detecting spatial parameters of a planar surface (Fig.
+1)--i.e., orientation, time-to-contact (or time-to-collision), and the
+shortest distance--from an optical flow field. To this end, the model is
+attempted to be implemented on computer.
+
+<center>
+<img Src="fig1.png" Alt="Fig.1" width="495">
+</center>
+
+A neural network model for local motion detection (Fig. 2(B)) we proposed
+[1, 2] enables each local motion in the respective receptive-field to be
+detected as the coordinates of a cell activated in the motion-detection
+cell array most intensively. Then, a neural network modeled in this study,
+linking the detection cells and MST cells, enables the motions to be
+integrated to detect the plane's orientation, time, and distance as the
+coordinates of a cell (e.g., n and tc in Fig. 2(C)) activated in the MST
+column most intensively. This MST model is based on two types of algorithm
+[3]; an algorithm type, using the polar transformation (or duality) and a
+cross-ratio transformation we found based on projective geometry,
+integrates the motions to detect the plane's time and orientation; the
+other type, using a small-circle transformation we found, integrates the
+motions to detect the plane's distance and orientation.
+
+<center>
+<a class="fig" href="fig2.png" target="_top"><img Src="fig2.png"
+Alt="Fig.2" width="450" height="285" title="Fig.2 (Click to zoom up)"></a>
+<br>(19k PNG image)<font size=-1><color "#DDDDDD">Click to zoom up</color></font>
+</center><br>
+
+</p>
+<p Class="bbl">
+[1] Kawakami, S. & Okamoto, H. (1996). A cell model for the detection of
+local image motion on the magnocellular pathway of the visual cortex.
+Vision Res., vol. 36, pp. 117-147.<br>
+[2] Okamoto, H., Kawakami, S., Saito, H., Hida, E., Odajima, K., Tamanoi,
+D., & Ohno, H. (1999). MT neurons in the macaque exhibited two types of
+bimodal direction tuning as predicted by a model for visual motion
+detection. Vision Res., vol. 39, pp. 3465-3479.<br>
+[3] Kawakami, S., Matsuoka, H., Okamoto, H., & Hosogi, S. (2000). A neural
+network model for detecting planar surface spatially from optical flow in
+area MST of the visual cortex. Trans IEICE, vol. J83-D-II, pp. 2786-2797.
+
+</p>
+<hr WIDTH="100%">
+</body>
+</html>
